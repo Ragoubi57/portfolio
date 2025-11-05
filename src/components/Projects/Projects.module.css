@@ -1,0 +1,131 @@
+.projectsSection {
+  padding: 100px 0;
+  text-align: center;
+}
+
+.title {
+  font-size: 2.5rem;
+  margin-bottom: 4rem;
+  color: var(--color-text-light);
+}
+
+.title::after {
+  content: ''; display: block; width: 80px; height: 4px;
+  background: var(--color-primary); margin: 1rem auto 0; border-radius: 2px;
+}
+
+.carouselContainer {
+  margin: 0 auto;
+  position: relative;
+  height: 550px;
+}
+
+.carouselViewport {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  perspective: 2000px;
+  transform-style: preserve-3d;
+}
+
+.cardContainer {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 500px;
+  height: 100%;
+  box-sizing: border-box;
+  transition: transform 0.6s cubic-bezier(0.7, 0, 0.2, 1), opacity 0.6s ease, filter 0.6s ease;
+  pointer-events: none; /* Make non-active cards unclickable */
+}
+
+.active {
+  transform: translateX(-50%) translateZ(0) rotateY(0);
+  opacity: 1;
+  z-index: 3;
+  filter: blur(0px);
+  pointer-events: auto; /* The active card is clickable */
+}
+
+/* --- FIX for side cards --- */
+.prev {
+  transform: translateX(calc(-50% - 400px)) translateZ(-400px) rotateY(55deg);
+  opacity: 0.7; /* More visible */
+  z-index: 2;
+  filter: blur(1px); /* Less blur for better readability */
+}
+
+.next {
+  transform: translateX(calc(-50% + 400px)) translateZ(-400px) rotateY(-55deg);
+  opacity: 0.7; /* More visible */
+  z-index: 2;
+  filter: blur(1px); /* Less blur for better readability */
+}
+
+.hidden {
+  transform: translateX(-50%) scale(0.5);
+  opacity: 0;
+  z-index: 1;
+  filter: blur(5px);
+}
+
+/* --- FIX for the arrows --- */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background-color: rgba(17, 34, 64, 0.8);
+  border: 1px solid var(--color-accent);
+  color: var(--color-text-dark);
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  font-size: 1.8rem;
+  line-height: 42px;
+  cursor: pointer;
+  transition: all var(--transition-speed);
+}
+
+.arrow:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+  transform: translateY(-50%) scale(1.1);
+}
+
+/* Position arrows outside the carousel on larger screens */
+.left { left: -40px; }
+.right { right: -40px; }
+
+/* Bring arrows inside on smaller screens */
+@media (max-width: 900px) {
+  .left { left: 10px; }
+  .right { right: 10px; }
+}
+
+
+.dots {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--color-accent);
+  border: none;
+  cursor: pointer;
+  transition: all var(--transition-speed);
+}
+
+.dot:hover {
+  background-color: var(--color-text-dark);
+}
+
+.dot.activeDot {
+  background-color: var(--color-primary);
+  transform: scale(1.2);
+}

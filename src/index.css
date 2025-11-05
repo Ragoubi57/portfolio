@@ -1,0 +1,44 @@
+:root {
+  /* Color Palette */
+  --color-background: #0a192f; /* Deep Navy */
+  --color-text-light: #ccd6f6; /* Light Slate */
+  --color-text-dark: #8892b0; /* Dark Slate */
+  --color-primary: #64ffda;   /* Bright Cyan/Mint */
+  --color-accent: #1e3a8a;    /* Brighter Blue for highlights */
+  --color-card-bg: #112240;   /* Lighter Navy */
+
+  /* Typography */
+  --font-heading: 'Lexend', sans-serif;
+  --font-body: 'Inter', sans-serif;
+
+  /* Animation */
+  --transition-speed: 0.3s;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Lexend:wght@700&display=swap');
+
+body {
+  margin: 0;
+  color: var(--color-text-light);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* --- CORRECTED GRADIENT --- */
+  /* This uses the darker card color instead of the bright blue accent */
+  background: linear-gradient(35deg, var(--color-background), var(--color-card-bg), var(--color-background));
+  background-size: 200% 200%;
+  animation: gradient-animation 20s ease infinite;
+}
+
+@keyframes gradient-animation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Global Styles */
+h1, h2, h3 {
+  font-family: var(--font-heading);
+  color: var(--color-text-light);
+}

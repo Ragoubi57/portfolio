@@ -1,0 +1,52 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem 2rem;
+  box-sizing: border-box; /* Ensures padding is included in width */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  transition: background-color 0.3s ease-in-out, padding 0.3s ease-in-out;
+}
+
+.scrolled {
+  background-color: rgba(10, 25, 47, 0.85);
+  backdrop-filter: blur(10px);
+  padding: 0.5rem 2rem;
+  box-shadow: 0 10px 30px -10px rgba(0,0,0,0.3);
+}
+
+.logo {
+  font-family: monospace;
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+  padding: 0.25rem 0.5rem;
+  cursor: pointer;
+}
+
+.navLinks {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.navLinks button {
+  background: none;
+  border: none;
+  color: var(--color-text-light);
+  font-family: monospace;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: color var(--transition-speed);
+}
+
+.navLinks button:hover {
+  color: var(--color-primary);
+}

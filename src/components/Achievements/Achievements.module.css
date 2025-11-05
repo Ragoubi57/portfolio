@@ -1,0 +1,175 @@
+.achievementsSection {
+  max-width: 1200px;
+  margin: 80px auto;
+  padding: 60px 20px;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 60px;
+  color: #64ffda;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+}
+
+.card {
+  background: rgba(100, 255, 218, 0.05);
+  border: 1px solid rgba(100, 255, 218, 0.1);
+  border-radius: 12px;
+  padding: 30px;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(100, 255, 218, 0.3);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.headerIcon {
+  font-size: 1.8rem;
+  color: #64ffda;
+}
+
+.cardHeader h3 {
+  font-size: 1.3rem;
+  color: #ccd6f6;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* Certificates Grid */
+.certificatesGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.certificate {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 15px;
+  background: rgba(10, 25, 47, 0.7);
+  border-radius: 8px;
+  border-left: 3px solid;
+  transition: all 0.2s ease;
+}
+
+.certificate:hover {
+  background: rgba(10, 25, 47, 0.9);
+  transform: translateX(5px);
+}
+
+.certIcon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.certName {
+  color: #8892b0;
+  font-size: 0.9rem;
+  line-height: 1.3;
+}
+
+/* Languages List */
+.languagesList {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.languageItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background: rgba(10, 25, 47, 0.7);
+  border-radius: 8px;
+  border-left: 3px solid #64ffda;
+}
+
+.langName {
+  font-size: 1.1rem;
+  color: #ccd6f6;
+  font-weight: 600;
+}
+
+.langLevel {
+  color: #64ffda;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+/* Activities List */
+.activitiesList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.activitiesList li {
+  position: relative;
+  padding: 15px 15px 15px 40px;
+  background: rgba(10, 25, 47, 0.7);
+  border-radius: 8px;
+  color: #8892b0;
+  line-height: 1.6;
+  border-left: 3px solid #64ffda;
+}
+
+.activitiesList li::before {
+  content: '▹';
+  position: absolute;
+  left: 15px;
+  color: #64ffda;
+  font-size: 1.3rem;
+}
+
+@media (max-width: 768px) {
+  .achievementsSection {
+    padding: 40px 15px;
+  }
+
+  .title {
+    font-size: 2rem;
+    margin-bottom: 40px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .certificatesGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .certificate {
+    padding: 10px 12px;
+  }
+
+  .certName {
+    font-size: 0.85rem;
+  }
+
+  .cardHeader h3 {
+    font-size: 1.1rem;
+  }
+}
