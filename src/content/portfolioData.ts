@@ -15,7 +15,7 @@ export const projects: Project[] = [
     title: "ReportGen: AI-Powered Report Generator",
     shortDescription: "Multi-agent system automating LaTeX report generation from natural language queries.",
     tags: ["Python", "FastAPI", "Gemini API", "ChromaDB", "Docker", "LaTeX"],
-    imageUrl: "/reportgen.png",
+    imageUrl: "reportgen.png",
     githubUrl: "https://github.com/Ragoubi57/ReportGen",
   },
   {
@@ -23,7 +23,7 @@ export const projects: Project[] = [
     title: "VoltixAI: Multi-Agent Conversational AI",
     shortDescription: "Built a conversational AI with RAG pipeline and secure MySQL agent, reducing query time by 40%.",
     tags: ["Python", "FastAPI", "LangChain", "RAG", "MySQL"],
-    imageUrl: "/voltix.png",
+    imageUrl: "voltix.png",
     status: 'proprietary', // Internship project - company code
   },
   {
@@ -31,7 +31,7 @@ export const projects: Project[] = [
     title: "Market Intelligence Platform",
     shortDescription: "Full-stack analytics platform with containerized PySpark ETL processing 28K+ records and FinBERT sentiment analysis.",
     tags: ["Python", "PySpark", "Docker", "React", "FinBERT", "Supabase"],
-    imageUrl: "/market-intelligence.png",
+    imageUrl: "market-intelligence.png",
     githubUrl: "https://github.com/Ragoubi57/Market_Intelligence",
   },
   {
@@ -46,8 +46,8 @@ export const projects: Project[] = [
     title: "TuniGo: Tourism Promotion App",
     shortDescription: "Mobile application promoting tourism in Tunisia with real-time recommendations and interactive guides.",
     tags: ["React Native", "Expo", "Firebase", "Mobile Dev"],
-    imageUrl: "/tunigo.png", // Use mockup or device frame screenshot
-    githubUrl: "https://github.com/Ragoubi57/TuniGo-Mobile-Application", // Replace with actual repo URL
+    imageUrl: "tunigo.png",
+    githubUrl: "https://github.com/Ragoubi57/TuniGo-Mobile-Application",
   },
   {
     slug: "service-exchange-app",

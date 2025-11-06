@@ -23,7 +23,7 @@ export const Hero = () => {
       <div className={styles.photoContainer}>
         {}
         <img 
-          src="/githubpfp.jpg" // The path is absolute from the 'public' folder
+          src={`${import.meta.env.BASE_URL}githubpfp.jpg`}
           alt="Mohamed Ali Ragoubi" 
           className={styles.photo} 
         />
