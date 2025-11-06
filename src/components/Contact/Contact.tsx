@@ -13,7 +13,7 @@ export const Contact = () => {
 
       {/* Main Call to Action: Download CV */}
       <a 
-        href={`${import.meta.env.BASE_URL}MohamedAliRagoubi_CV.pdf`}
+        href="MohamedAliRagoubi_CV.pdf"
         download 
         className={styles.button}
       >

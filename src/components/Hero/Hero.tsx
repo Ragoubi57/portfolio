@@ -23,7 +23,7 @@ export const Hero = () => {
       <div className={styles.photoContainer}>
         {}
         <img 
-          src={`${import.meta.env.BASE_URL}githubpfp.jpg`}
+          src="githubpfp.jpg"
           alt="Mohamed Ali Ragoubi" 
           className={styles.photo} 
         />

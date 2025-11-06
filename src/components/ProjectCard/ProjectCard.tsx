@@ -32,7 +32,7 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
     >
       <div className={styles.imageContainer}>
         {hasImage ? (
-          <img src={`${import.meta.env.BASE_URL}${project.imageUrl}`} alt={project.title} className={styles.img} />
+          <img src={project.imageUrl} alt={project.title} className={styles.img} />
         ) : (
           <div 
             className={styles.placeholder}
